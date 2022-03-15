@@ -102,10 +102,12 @@ model.compile(loss="categorical_crossentropy",
 
 earlystopping = callbacks.EarlyStopping(
     monitor="loss", mode="min", patience=5, restore_best_weights=True)
+
 callbacks = [earlystopping]
 
 # fitting and saving the model
 hist = model.fit(np.array(train_x), np.array(train_y),
                  epochs=200, batch_size=5, verbose=1)
-model.save("chatbot_model_5.h5", hist)
+
+model.save("models/chatbot_model.h5", hist)
 print("Model created.")

@@ -1,34 +1,4 @@
-/* body {
-    font: 10px 'Courier New', monospace;
-    background-color: #3490dc;
-  }
-
-.row{
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-/* .fixed {
-    position: fixed;
-    top:500px;
-    left:3300px;
-    text-align: center;
-} */
-/*
-footer {
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    height:20px;
-    width:100%;
-    background: #21263A;
-    text-align: center;
-    font-size: 8px;
-    color: whitesmoke;
-    margin-top: 5px;
- } */
-
- :root {
+:root {
     --body-bg: linear-gradient(135deg, #3490dc 0%, #0f2342 100%);
     --msger-bg: #fff;
     --border: 2px solid #21263A;
@@ -156,14 +126,14 @@ footer {
   }
   .msger-send-btn {
     margin-left: 10px;
-    background: #006400;
+    background: rgb(0, 196, 65);
     color: #fff;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.23s;
   }
   .msger-send-btn:hover {
-    background: #006400;
+    background: rgb(0, 180, 50);
   }
   .msger-chat {
     background-color: #fcfcfe;

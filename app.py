@@ -9,12 +9,12 @@ from flask_bootstrap import Bootstrap
 import nltk
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
-import added_functionality as funcs
+import helper
 lemmatizer = WordNetLemmatizer()
 
 
 # chat initialization
-model = load_model("chatbot_model_5.h5")
+model = load_model("models/chatbot_model_5.h5")
 intents = json.loads(open("intents.json").read())
 words = pickle.load(open("words.pkl", "rb"))
 classes = pickle.load(open("classes.pkl", "rb"))
@@ -42,21 +42,21 @@ def chatbot_response():
         res1 = getResponse(ints, intents)
         res = res1.replace("{n}", name)
     elif msg.__contains__('random'):
-        res = funcs.rand_number()
+        res = helper.rand_number()
     elif msg.__contains__('joke'):
-        res = funcs.joke()
+        res = helper.joke()
     elif msg.__contains__('weather'):
-        res = funcs.weather()
+        res = helper.weather()
     elif msg.__contains__('news'):
         index = msg.find('about') + 6
         keyword = msg[index:]
-        res = funcs.news(keyword)
+        res = helper.news(keyword)
     elif msg.__contains__('dice'):
-        res = funcs.roll_dice()
+        res = helper.roll_dice()
     elif msg.__contains__('math'):
-        res = funcs.math_facts()
+        res = helper.math_facts()
     elif msg.__contains__('time'):
-        res = funcs.hour()
+        res = helper.hour()
     # if no name is passed execute normally
     else:
         ints = predict_class(msg, model)
