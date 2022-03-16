@@ -14,19 +14,7 @@
     left:3300px;
     text-align: center;
 } */
-/*
-footer {
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    height:20px;
-    width:100%;
-    background: #21263A;
-    text-align: center;
-    font-size: 8px;
-    color: whitesmoke;
-    margin-top: 5px;
- } */
+
 
  :root {
     --body-bg: linear-gradient(135deg, #3490dc 0%, #0f2342 100%);
@@ -168,3 +156,15 @@ footer {
   .msger-chat {
     background-color: #fcfcfe;
   }  
+  footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:20px;
+    width:100%;
+    background: #21263A;
+    text-align: center;
+    font-size: 8px;
+    color: whitesmoke;
+    margin-top: 5px;
+ }
