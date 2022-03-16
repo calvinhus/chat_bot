@@ -7,7 +7,7 @@ import pickle
 from nltk.stem import WordNetLemmatizer
 import nltk
 import helper
-
+nltk.download('popular')
 lemmatizer = WordNetLemmatizer()
 model = load_model('models/chatbot_model.h5')
 intents = json.loads(open('intents.json').read())
